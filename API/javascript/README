@@ -1,0 +1,7 @@
+bootstrap.min.js and bootstrap.min2.js this is a plugin
+
+
+formHandler.js   event processes of all modals. 
+				Contain the generation of  forms inside modals.
+
+ajax.js	 This contains the form submission to avoid loading the page , on form submit

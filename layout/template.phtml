@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="nb" >
+<head>
+    <title>eRPMES-neda</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="image/icon.ico" type="image/x-icon" />
+    <meta name="description" content="Electronic Monitoring and Evaluation System " />
+    <meta name="keywords" content="Neda,  NedaSystem" />
+    <meta name="author" content="donnie" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="text/javascript" src="./API/javascript/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="./API/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./API/css/bootstrap-theme.min.css"/>
+
+    <script src="./API/javascript/bootstrap.min.js"></script>
+ 
+ 
+
+<script type="text/javascript" src="./API/javascript/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./API/javascript/formHandler.js"></script>
+<script type="text/javascript" src="./API/javascript/ajax.js"></script>
+
+
+<link rel="stylesheet"  href="./API/css/custom.css"></link>
+
+
+
+
+
+      
+</head>
+<body >
+  
+    
+    <div id="alertHere"></div>
+    
+     
+<nav class="navbar navbar-default nav-header" role="navigation">
+  <div class="container-fluid con-header">
+    <div class="navbar-header">
+       <a class="navbar-brand" href="?page=7bba1f7724a766bb8cd54a49b2c8c13ec0b4ca68&home=2736fab291f04e69b62d490c3c09361f5b82461a&maintab=home">
+           
+          <img id="logo" src="./image/RPMES.jpg"  alt="logo" class="img-circle"/>
+
+ 
+           
+           
+      </a>
+      <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+        <div class="row">
+             
+            <div class="col-sm-4">
+                 <a class="navbar-brand" href="?page=7bba1f7724a766bb8cd54a49b2c8c13ec0b4ca68&home=2736fab291f04e69b62d490c3c09361f5b82461a&maintab=home">
+      
+        <h5>  <b>R</b>egional <b>P</b>roject <b>M</b>onitoring and <b>E</b>valuation <b>S</b>ystem
+                                    <br/>
+  <small>   National Economic and Development Authority</small></h5>
+         </a>
+            </div>
+             
+            
+       <?Php
+       
+       if($auth->is_logged_in()=="true"){ ?>
+            <div class="col-sm-6">
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li ><a href="?page=7bba1f7724a766bb8cd54a49b2c8c13ec0b4ca68&home=2736fab291f04e69b62d490c3c09361f5b82461a&maintab=home"
+                >Home
+              <span class="glyphicon glyphicon-home"/>
+              </a></li>
+       
+        <li><a href="?page=f61918994eeec9e24e2b1cd8abf5770a383939be#About">About
+            <span class="glyphicon glyphicon-star-empty"/>
+            
+            </a></li>
+        <li><a href="?page=96a26200cbb466c1dd05cb6d9c7c13f1b90a82ac#Howto">How to
+            <span class="glyphicon glyphicon-facetime-video"/>
+            
+            </a></li>
+        <li><a href="?page=514a6978ba92198b672c68362a9c84ed24e26adf#Contact" >Contact
+            <span class="glyphicon glyphicon-phone"/>
+            </a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dashboard
+              <span class="glyphicon glyphicon-dashboard"></span>
+              
+               <span class="caret">
+                   
+                   
+                   
+               </span>
+          </a>
+         
+          
+          <ul class="dropdown-menu">
+             
+        <?Php if($auth->is_admin()=="true") { ?>
+              <li>
+      <a href="?page=485a993995bd218607c3ffe78bc387fafeaf7e5a&Panel=a69105e6674259a60c9b40e3c1169f11ac6806da
+                        " >
+          <span class="glyphicon glyphicon-user" ></span>
+          
+        Manage Users</a>
+              </li>
+          
+              <li>
+      <a  href="?page=485a993995bd218607c3ffe78bc387fafeaf7e5a&Panel=ddb25a2769c7269b8c8dea9ebd8d978683af9eb0
+                        " >
+          <span class="glyphicon glyphicon-th-list" ></span>
+          
+          
+          Details
+          </a>
+              </li>
+      <?Php } ?>
+              <li  class="dropdown-submenu">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+               <span class="glyphicon glyphicon-folder-open"></span>
+              Projects 
+              
+                      </a>
+                      
+                        <ul class="dropdown-menu">
+            
+                               <li>
+                             <a  href="?page=485a993995bd218607c3ffe78bc387fafeaf7e5a&Panel=4ea9fa7240ef926ed7106723775a2ed1edd66fad" >
+                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                            Monitoring Plan
+                             </a>   
+                         </li>  
+                             <li>
+                             <a  href="?page=485a993995bd218607c3ffe78bc387fafeaf7e5a&Panel=b0495f6e0571f5427f7a35c8c1162944f2b496e9" >
+                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                            Accomplishment
+                             </a>   
+                         </li>  
+                         <li>
+                             <a  href="?page=485a993995bd218607c3ffe78bc387fafeaf7e5a&Panel=12c891d306f76efa45d52fe79a9fd7daa2247d3b" >
+                                <span  class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                            Graphs
+                             </a>   
+                         </li>  
+                        
+                      
+                            <?php
+                              $ack = new acknowledgementDAO();
+                        if($auth->is_admin()=='true'){
+                      echo  '    <li><a href="?page=6d7f200fac43f37f5b196bdc0152d9e56541c7f3&Panel=f9f7917226ec6e9fbadd4fe52c35f233baccd628">
+                            <span  class="glyphicon glyphicon-file" aria-hidden="true"></span> Acknowledgement <span style="color:red" class="badge">
+                '. $ack->countInbox($GLOBALS['year'])
+                              .'</span></a></li>'
+                              ;
+                        }
+                            ?>
+                      
+                     </ul>      
+              
+              </li>
+   
+     
+      
+       
+          </ul>
+        </li>
+          
+          
+          
+          
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <?Php echo $_SESSION['username']; ?>
+              <span class="glyphicon glyphicon-user"></span>
+              
+               <span class="caret">
+                   
+                   
+                   
+               </span></a>
+         
+          
+          <ul class="dropdown-menu">
+            <li><a href="?page=f34276d0518706a22b98954f4ef2b0a19b2040f4">My Profile</a></li>
+            
+            
+                
+                        <?Php
+                        
+                      
+                        ?>
+                        
+                    
+       
+            <li><a href="?page=55525e1b3dfd8787fd202aed45fb04494e3242d0" >Logout</a></li>
+          
+       
+          </ul>
+        </li>
+      
+      </ul>
+      
+        </div>
+  <?Php } ?>
+        </div>
+  </div>
+  </div>
+</nav>
+
+    
+
+  
+   
+<?php 
+function LogHere($String){
+    echo  "<script>console.log(".$String.");</script>";
+    
+}
+if($auth->is_logged_in()=='true'){
+    
+  echo '  <div class="container-fluid ">';
+}else{
+   echo '  <div class="container-fluid ">';
+}
+?>
+<div class="announcement">
+     <button type="button" class="close closeAnnouncement"  ><span >&times;</span></button>
+   
+    <h4>Announcement</h4>
+    <p>
+        <a target="_blank" href="./forms.xlxs">click me </a>
+    </p>
+
+</div>
+<div class="AjaxLoader">
+    <div>
+    <img src="image/ajax-loader.gif"  alt="ajax-loader"/>
+    <div class="progressLoader" >
+    <div class="progress">
+  <div class="progress-bar" id="loaderProgress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" >
+
+  </div>
+</div>
+<div align="center" id="lab">
+   
+</div>
+
+    </div>
+    </div>
+
+</div> 
+

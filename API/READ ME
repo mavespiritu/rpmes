@@ -1,0 +1,16 @@
+API folder contain the CSS, FONTS, JAVASCRIPT,DOMPDF, 
+
+CSS: 
+	This is the face of the system , where you can modify the color, size  or template of the  system .
+
+FONTS: 
+	This are the glyphicons, or the icons of the system .. 
+
+DOMPDF:
+	This is the PDF generator of the report generation. by calling the  class method.
+
+JAVASCRIPT: 
+	This is one of the most important on frontend user.
+
+	Open this folder and read the "readme.txt" 
+

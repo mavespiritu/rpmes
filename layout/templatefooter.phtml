@@ -1,0 +1,37 @@
+</div>
+
+<br/>
+<br/>
+<div id="cusfooter" class="hide-print" >
+ 
+        <h4 >  e-RPMES
+                                 
+  <small  >   National Economic and Development Authority</small> | <?Php 
+$auth = new  authentication();
+   $hit = new hitDAO();
+   $host = $_SERVER['HTTP_HOST'];
+     $agent = $_SERVER['HTTP_USER_AGENT'];
+     
+   if(isset($_SERVER['HTTP_REFERER'])){
+   $ref = $_SERVER['HTTP_REFERER'];
+   }
+   else{
+       $ref ="";
+   }
+ 
+   $datetim = $GLOBALS['datetime'];
+    $hit->addHit($auth->getPhpSession(),$host,$ref,$agent,$auth->get_client_ip(),$datetim);
+    
+   
+ echo  number_format($hit->getHit()) . " hits since 2015 ";
+
+?></h4>
+
+
+
+</div>
+
+
+</div>
+</body>
+</html>
