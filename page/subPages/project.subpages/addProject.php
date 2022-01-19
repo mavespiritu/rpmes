@@ -341,7 +341,7 @@ $projNUm = $ordering->getLastNoOfProj($agss)+1;
             <label for="projobj" class="col-sm-2 control-label">Project Result</label>
     <div class="col-sm-4">
       <?php 
-        $objectives = [
+        $objectives = array(
           'Accountability and Efficiency in Governance Measures Improved',
           'Public Access to Information Enhanced', 
           'Revenue Collections Enhanced', 
@@ -390,7 +390,7 @@ $projNUm = $ordering->getLastNoOfProj($agss)+1;
           'Environment Quality Improved: Land Quality',
           'Biodiversity Protected',
           'Human Well-Being Ensured'
-        ];
+        );
 
         sort($objectives);
       ?>
